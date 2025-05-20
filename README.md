@@ -1,2 +1,8 @@
-# finance-totadvi
-A custom-built Financial Management System that helps companies manage, track, and analyze their finances securely and efficiently.
+-- Overview --
+
+Financial web application for small and medium-sized enterprises.
+Help businesses manage company's finances effectively
+
+-- How to run -- 
+
+command : npm run start
