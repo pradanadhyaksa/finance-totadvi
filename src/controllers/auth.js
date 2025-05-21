@@ -50,7 +50,7 @@ export const CONTROLLER_AUTH = {
   }),
 
   signIn: asyncMiddleware(async (req, res) => {
-    const { email, password } = req.body // Changed from req.query to req.body
+    const { email, password } = req.body 
     const user = await User.findOne({ email }).select('+password')
 
     if (!user) {
@@ -186,8 +186,8 @@ export const CONTROLLER_AUTH = {
 
     const buffer = await crypto.randomBytes(20);
     const token = buffer.toString('hex');
-
-    const user = await User.findOne({ email });
+    
+    const user = await User.findOne({ email })
     if (!user) {
       return res.status(StatusCodes.NOT_FOUND).json({
         message: 'No account with that email address exists.',
@@ -197,7 +197,6 @@ export const CONTROLLER_AUTH = {
     user.resetPasswordToken = token;
     user.resetPasswordExpires = Date.now() + 3600000; 
     await user.save();
-    
     const transporter = nodemailer.createTransport({
       service: 'Gmail', 
       auth: {
@@ -212,7 +211,7 @@ export const CONTROLLER_AUTH = {
       subject: 'Password Reset',
       text: `You are receiving this because you (or someone else) requested a password reset.\n\n
         Please click on the following link, or paste it into your browser to complete the process:\n\n
-        ${process.env.FRONTEND_URL}/reset-password/${token}\n\n
+        ${process.env.REACT_APP_HOST_API}/auth/reset-password/${token}\n\n
         If you did not request this, please ignore this email and your password will remain unchanged.\n`,
     };
     
@@ -224,9 +223,7 @@ export const CONTROLLER_AUTH = {
   }),
 
   resetPassword: asyncMiddleware(async (req, res) => {
-    const { token } = req.params;
-    const { password } = req.body;
-    
+    const { token, password } = req.body;
     const user = await User.findOne({
       resetPasswordToken: token,
       resetPasswordExpires: { $gt: Date.now() },
@@ -255,7 +252,7 @@ export const CONTROLLER_AUTH = {
     const mailOptions = {
       to: user.email,
       from: process.env.EMAIL_ADDRESS,
-      subject: 'Your password has been changed',
+      subject: 'Your password has been changed!',
       text: `Hello,\n\nThis is a confirmation that the password for your account ${user.email} has just been changed.\n`,
     };
     
@@ -268,7 +265,7 @@ export const CONTROLLER_AUTH = {
 
   verifyResetToken: asyncMiddleware(async (req, res) => {
     const { token } = req.params;
-    
+    console.log('token', token)
     const user = await User.findOne({
       resetPasswordToken: token,
       resetPasswordExpires: { $gt: Date.now() },
@@ -280,7 +277,7 @@ export const CONTROLLER_AUTH = {
       });
     }
     
-    res.status(StatusCodes.OK).json({
+    return res.status(StatusCodes.OK).json({
       message: 'Token is valid.',
     });
   })
